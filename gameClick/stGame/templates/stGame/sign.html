@@ -1,0 +1,24 @@
+{% extends 'stGame/base.html'%}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+{% block title %}Вход{% endblock %}
+{% block content %}
+<div class="login-page">
+    <div class="form">
+        <div class="title-form">Регистрация</div>
+        <form method='POST' action="{% url 'register' %}">
+            {% csrf_token %}
+            {{form}}
+            <p><input class="button-reg" type="submit" value="Создать аккаунт"></p>
+        </form>
+
+        {% if form.errors %}
+        <p>{{form.errors}}</p>
+        {% endif %}
+        <p class="message">Уже зарегистрированы? <a href="{% url 'login' %}">Войти в учётную запись</a></p>
+    </div>
+</div>
+<script src="{% static 'js/login.js' %}"></script>
+{% endblock %}

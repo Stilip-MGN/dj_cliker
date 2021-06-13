@@ -1,0 +1,151 @@
+body {
+    margin: 0;
+    background-color: #42378f;
+    background-image: linear-gradient(0deg, #42378f 0%, green 78%);
+    margin-bottom: 250px;
+    background-repeat: no-repeat;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+.hi {
+    color: white;
+    font-size: 30px;
+}
+
+.image{
+    max-height: 50%;
+    background-color: #2f4353;
+    background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 80%);
+
+}
+
+.dead{
+    box-shadow: inset 0 0 50px 30px brown;
+}
+
+.button_click{
+    padding: 0;
+    margin: 0 0  20px 0;
+    border: 0;
+    background-color: #2f4353;
+}
+
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.theme-button{
+    text-decoration:none;
+
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    background-color: green;
+    color: white;
+    height: 100px;
+    align-items:center;
+}
+.theme-button{
+    width: 15%;
+    height: 80%;
+    background-color: brown;
+    margin-right: 1%;
+    font-size: 24px;
+}
+a{
+    color: white;
+    text-decoration:none;
+}
+
+.header-text{
+    margin-left: 5%;
+    flex-grow: 2;
+    font-size: 6ch;
+}
+
+.hp{
+    position: relative;
+    margin: -0px;
+    overflow: hidden;
+    height: 30px;
+    font-size: 24px;
+    background-color: grey;
+}
+.hp-bar{
+    background-color: firebrick;
+    width: 100%;
+    height: 28px;
+}
+.hp-score{
+    width: 100%;
+    height: 28px;
+    position:relative;
+    margin:  -28px 0;
+    color: white;
+}
+.flex{
+    display: flex;
+    justify-content: space-around;
+    width: 554px;
+    height: 100px;
+
+}
+.button-boost{
+    font-size: 30px;
+    color: white;
+    width: 40%;
+    height: 100%;
+    border-color: black;
+}
+
+.green{
+    background-color: forestgreen;
+}
+
+.red{
+    background-color: firebrick;
+}
+
+.button_up{
+    margin-top: 20px;
+    width: 46%;
+    height: 100%;
+    font-size: 24px;
+    border-color: black;
+}
+
+
+.button_hit_up{
+    color: white;
+    background-color: #42378f;
+    background-image: linear-gradient(315deg, #42378f 0%, #f53844 88%);
+}
+.button_power_up{
+    color: white;
+    background-color: #0bab64;
+    background-image: linear-gradient(45deg, #42378f 0%, #0bab64 88%);
+}
+
+.info div{
+    color: white;
+
+    font-size: 26px;
+}
+.gold{
+    color: gold;
+}
+
+
+
+
+
+

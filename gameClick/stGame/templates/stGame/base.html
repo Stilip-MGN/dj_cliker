@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    {% block link %}{% endblock %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+</head>
+<body>
+    <header class="page-header">
+      <div class="container">
+        <span class="header-text">
+          Игра Супер Грустный Кликер
+        </span>
+          {% if request.user.is_authenticated %}
+              <button class="theme-button" type="button"><a href="{% url 'home' %}">Главная</a></button>
+
+              <button class="theme-button" type="button"><a href="{% url 'logout' %}">Выход</a></button>
+          {% else %}
+              <button class="theme-button" type="button"><a href="{% url 'login' %}">Вход</a></button>
+              <button class="theme-button" type="button"><a href="{% url 'register' %}">Регистрация</a></button>
+          {% endif %}
+      </div>
+    </header>
+
+
+    {% block content %}{% endblock %}
+</body>
+</html>

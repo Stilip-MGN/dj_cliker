@@ -1,0 +1,37 @@
+{% extends 'stGame/base.html'%}
+{% load static %}
+{% block link %}
+{% endblock %}
+{% block title %}Кликер{% endblock %}
+{% block content %}
+<div class="flex-center">
+    <h2 class="hi">Привет, <span class="gold">{{ score.user }}</span>, покажи этому БОССу, кто здесь главный!</h2>
+    <h2 class="info">
+        <div >Твой кошелек = <span class="score gold">{{ score.score }}</span></div>
+        <div >За клик ты получишь = <span class="click_power gold">{{ score.boost }}</span></div>
+        <div >Сила твоего удара = <span class="hit gold">{{ score.score_hit }}</span></div>
+        <div >Твой уровень крутости = <span class="lvl gold">{{ score.lvl }}</span></div>
+    </h2>
+{% csrf_token %}
+    <button class="button_click" type="button">
+        <img class="image" id="click-image" src="{% static 'imgs/kwa.png' %}" alt="">
+        <div class="hp">
+            <div class="hp-bar"></div><div class="hp-score">100</div>
+        </div>
+    </button>
+
+    <div class="flex">
+        <button class="green button-boost" type="button">Заработать</button>
+        <button class="red button-boost" type="button">Потратить</button>
+    </div>
+    <div class="flex">
+        <button class="button_up button_power_up" type="button">
+              <div >Цена улучшения заработка <span class="power_up_cost">{{ score.nextLvl_click }}</span></div>
+         </button>
+        <button class="button_up button_hit_up " type="button">
+              <div >Цена улучшения удара <span class="hit_up_cost">{{ score.nextLvl_hit }}</span></div>
+         </button>
+    </div>
+</div>
+<script src="{% static 'js/coins.js' %}"></script>
+{% endblock %}
